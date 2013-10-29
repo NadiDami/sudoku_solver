@@ -4,6 +4,8 @@ class Cell
     @index = index
     @value = value
     @cell_array = cell_array
+    @row = row
+    @box = box
   end
 
   def index
@@ -16,6 +18,18 @@ class Cell
 
   def cell_array
     @cell_array
+  end
+
+  def row
+    index/9
+  end
+
+  def column
+    index%9
+  end
+
+  def box
+    (row/3) * 3 + (column/3)
   end
 
 
