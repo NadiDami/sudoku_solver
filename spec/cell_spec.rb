@@ -39,6 +39,12 @@ describe Cell do
     it 'knows which box it is in' do
       expect(cell2.box).to eq 1
     end
+
+    it 'has a list of candidates from 1-9 if the cell is unsolved' do
+      expect(cell.candidates).to eq [1,2,3,4,5,6,7,8,9]
+    end
+
+
     
 
   end
